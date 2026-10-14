@@ -1,0 +1,33 @@
+[project]
+name = "biomedrag"
+version = "0.1.0"
+description = "Cited biomedical literature assistant: hybrid retrieval, reranking, citation checking, evaluation."
+requires-python = ">=3.11"
+dependencies = [
+  "biopython",
+  "rank-bm25",
+  "sentence-transformers",
+  "faiss-cpu",
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "httpx",
+  "python-dotenv",
+  "numpy",
+  "pandas",
+  "tqdm",
+  "pysbd",
+  "huggingface_hub",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

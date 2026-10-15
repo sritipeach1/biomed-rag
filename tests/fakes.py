@@ -55,3 +55,37 @@ def make_chunks() -> list[dict]:
         chunks.append({'chunk_id': f'{pmid}_{idx}', 'pmid': pmid, 'title': title, 'year': '2024',
                        'text': f'{title}. {body}'})
     return chunks
+
+
+class FakeLLM:
+    """Replies with scripted answers, one per call, and remembers what it was asked."""
+
+    name, model = 'fake', 'fake-1'
+
+    def __init__(self, replies):
+        self.replies = list(replies)
+        self.calls: list[list[dict]] = []       # the messages of each call
+
+    def complete(self, messages):
+        self.calls.append([dict(m) for m in messages])
+        if not self.replies:
+            raise AssertionError('the model was called more often than the test expected')
+        return self.replies.pop(0)
+
+
+class StubRetriever:
+    """Returns a fixed list of (passage, score) pairs, whatever the question."""
+
+    def __init__(self, results):
+        self.results = results
+        self.calls: list[dict] = []
+
+    def retrieve(self, query, mode='hybrid_rerank', k_final=5, **kwargs):
+        self.calls.append({'query': query, 'mode': mode, 'k_final': k_final})
+        return self.results[:k_final]
+
+
+def make_results(scores=(7.5, 6.0, 4.5)) -> list[tuple[dict, float]]:
+    """Passages for papers 1, 2, 3 of `make_chunks`, with the given reranker scores."""
+    chunks = {c['pmid']: c for c in make_chunks()}
+    return [(chunks[p], s) for p, s in zip(('1', '2', '3'), scores, strict=False)]

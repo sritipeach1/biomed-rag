@@ -1,6 +1,27 @@
+import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(ROOT / '.env')      # secrets and settings live in .env, which git never uploads
+
+
+def _env(name: str, default: str = '') -> str:
+    """Read a setting from .env or the environment. A blank value counts as "not set"."""
+    return os.environ.get(name, '').strip() or default
+
+
+def _env_float(name: str, default: float) -> float:
+    value = _env(name)
+    if not value:
+        return default
+    try:
+        return float(value)
+    except ValueError:
+        raise SystemExit(f'{name} in .env must be a number, but it is {value!r}') from None
+
+
 DATA = ROOT / 'data'
 INDEX = ROOT / 'index'
 
@@ -25,6 +46,18 @@ K_FINAL = 5             # how many papers go to the answer step
 RRF_K = 60              # standard constant for reciprocal rank fusion
 MODES = ('bm25', 'dense', 'hybrid', 'hybrid_rerank')
 EMBED_BLOCK = 10_000    # texts embedded per saved block, so an interrupted build can resume
+
+# Answering (Step 4)
+LLM_BACKEND = _env('LLM_BACKEND', 'ollama').lower()     # 'ollama' (on your PC) or 'groq' (hosted)
+OLLAMA_URL = _env('OLLAMA_URL', 'http://localhost:11434')
+OLLAMA_MODEL = _env('OLLAMA_MODEL', 'qwen2.5:3b')
+GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions'
+GROQ_MODEL = _env('GROQ_MODEL', 'openai/gpt-oss-120b')     # the models a key may use differ per account
+# If the best reranker score is below this, the question is treated as outside the literature and
+# no answer is written. 2.0 is a starting point read off 15 hand-checked questions; Step 5 calibrates
+# it properly. The score scale belongs to this reranker model: change the model, redo the threshold.
+REFUSE_BELOW = _env_float('REFUSE_BELOW', 2.0)
+MAX_RETRIES = 1         # extra attempts when the model's citations are missing or invalid
 
 
 def chunks_path(strategy: str) -> Path:

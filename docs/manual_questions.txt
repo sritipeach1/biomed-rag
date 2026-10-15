@@ -1,0 +1,18 @@
+# 15 questions for the manual check. Lines starting with # are ignored.
+# They mix exact gene or drug names (where keyword search should do well), paraphrased questions
+# (where meaning-based search should do well), and a few questions the corpus cannot answer.
+What is the role of IDH mutation in glioma prognosis?
+Does MGMT promoter methylation predict response to temozolomide?
+Which imaging features predict EGFR amplification in lower-grade gliomas?
+How does the tumor microenvironment affect immunotherapy in glioblastoma?
+What is the prognostic value of TERT promoter mutations?
+Can deep learning segment glioma on MRI automatically?
+Why do some brain tumours come back after surgery and radiotherapy?
+What drugs are being tested against diffuse midline glioma H3 K27M?
+How effective are CAR-T cells against glioblastoma?
+Does extent of resection improve survival in glioblastoma?
+What causes resistance to bevacizumab in recurrent glioblastoma?
+How does the blood-brain barrier limit drug delivery to brain tumors?
+What is the best treatment for type 2 diabetes in older adults?
+How much does a glioma operation cost in a private hospital?
+Which vaccines reduce the risk of heart failure?

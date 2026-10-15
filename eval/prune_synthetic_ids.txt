@@ -1,0 +1,17 @@
+# Synthetic questions to delete (picked by reading all 150). Used by:  python -m biomedrag.eval.prune --file eval\prune_synthetic_ids.txt
+
+# Not about glioma / brain tumours, or off-topic for this corpus
+s29895894 s30287524 s30497179 s30252101 s30123054 s31418931 s33786802 s37863654
+s33794242 s39286065 s38981871 s35127700 s31729307 s33614910 s37803478 s37810022
+s32943655 s39980037 s37496300 s39700655 s30991848 s33007830 s34415720
+
+# Points at the abstract ("this cohort") or is about a retraction notice
+s41522393 s35674173
+
+# Too broad: many papers would answer, only one is marked as correct
+s38728762 s35531099 s36551786 s33543142 s37841921 s30986516 s30102604 s37109434
+s39469896 s38396962 s36678688 s35205750 s36152044 s39766037 s39479457 s38035044
+s36673007 s37916157 s31953818
+
+# Gene-name "is X linked to survival" questions (BM25 finds these too easily; keep only some)
+s34784299 s30064232 s37195411 s37602882 s29733521

@@ -24,6 +24,9 @@ def _env_float(name: str, default: float) -> float:
 
 DATA = ROOT / 'data'
 INDEX = ROOT / 'index'
+EVAL = ROOT / 'eval'                         # question sets and result tables (committed to git)
+RESULTS = EVAL / 'results'
+QUESTIONS_PATH = EVAL / 'questions.jsonl'
 
 CORPUS_PATH = DATA / 'abstracts.jsonl'      # everything fetched from PubMed (Step 1)
 SAMPLE_PATH = DATA / 'docs_sample.jsonl'    # cleaned random sample: the corpus we index (Step 2)

@@ -1,0 +1,40 @@
+{"id": "uo01", "question": "Which antihypertensive drugs are the first choice for patients with chronic kidney disease?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo02", "question": "How effective is the HPV vaccine at preventing cervical cancer?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo03", "question": "What are the main risk factors for developing rheumatoid arthritis?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo04", "question": "How does SGLT2 inhibition protect the heart in patients with heart failure?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo05", "question": "Which antibiotics are recommended for community-acquired pneumonia in adults?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo06", "question": "How is asthma in children managed with inhaled corticosteroids?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo07", "question": "What is the role of the gut microbiome in inflammatory bowel disease?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo08", "question": "How does CRISPR gene editing treat sickle cell disease?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo09", "question": "What are the side effects of statins in elderly patients?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo10", "question": "Which screening tests detect colorectal cancer at an early stage?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo11", "question": "How long does recovery take after total knee replacement surgery?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo12", "question": "What causes amyloid plaques to form in Alzheimer's disease?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo13", "question": "How does the COVID-19 mRNA vaccine trigger an immune response?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo14", "question": "What is the recommended treatment for iron deficiency anaemia in pregnancy?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo15", "question": "How do I train a convolutional neural network for image classification?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo16", "question": "What is the capital city of Australia?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo17", "question": "Who won the FIFA World Cup in 2022?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo18", "question": "How do I cook a creamy mushroom risotto?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo19", "question": "What is the best programming language for a complete beginner?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "uo20", "question": "How does a change in mortgage interest rates affect house prices?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "out_of_domain"}
+{"id": "un01", "question": "How much does glioblastoma surgery cost at a private hospital in Dhaka?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un02", "question": "Which hospital in Europe has the shortest waiting time for glioma surgery?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un03", "question": "My father was just diagnosed with glioblastoma. How long will he live?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un04", "question": "What temozolomide dose should I take for my body weight of 70 kg?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un05", "question": "Should I stop my steroid tablets the week before my glioma operation?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un06", "question": "Which neurosurgeon performs the most awake craniotomies in the United States?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un07", "question": "Will a cure for glioblastoma be approved before 2030?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un08", "question": "How effective is trastuzumab for HER2-positive breast cancer?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un09", "question": "What is the five-year survival rate for pancreatic cancer?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un10", "question": "Which insurance plans cover proton therapy for glioma patients in Canada?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un11", "question": "How many glioma patients did Johns Hopkins Hospital treat last year?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un12", "question": "What is the price of one vial of bevacizumab?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un13", "question": "Can I legally drive a car after a glioma operation in the United Kingdom?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un14", "question": "Which clinical trials are recruiting glioma patients in Bangladesh right now?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un15", "question": "Who discovered the IDH1 mutation in glioma, and in which year?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un16", "question": "How do national glioma research budgets compare between the United States and the European Union?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un17", "question": "What is the best hospital for brain tumour surgery in India?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un18", "question": "How much sick leave are glioma patients entitled to under employment law?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un19", "question": "Which brand of MRI scanner gives the best images of glioma?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}
+{"id": "un20", "question": "What should I eat to stop my glioma from growing back?", "answerable": false, "gold_pmids": [], "source": "unanswerable", "kind": "near_miss"}

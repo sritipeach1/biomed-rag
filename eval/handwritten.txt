@@ -1,0 +1,15 @@
+h002 | How does 1p/19q codeletion affect response to chemotherapy in oligodendroglioma? | 30565028, 30623930
+h003 | Which molecular markers define glioblastoma in the 2021 WHO classification of CNS tumours? | 35578106, 36922356, 37279174
+h004 | Does tumour treating fields therapy improve overall survival in newly diagnosed glioblastoma? | 39893330, 37493865
+h006 | What are the outcomes of awake craniotomy for glioma located near language areas? | 33089447, 36358884, 33394262
+h007 | Do immune checkpoint inhibitors improve survival in recurrent glioblastoma? | 35976319, 38721406
+h009 | How is BRAF V600E mutation treated in paediatric low-grade glioma? | 42633479, 32923898
+h010 | What is the standard treatment for diffuse intrinsic pontine glioma in children? | 37151149, 33423692
+h011 | Can circulating tumour DNA in blood or cerebrospinal fluid be used to monitor glioma? | 32039443, 38473369, 33403678
+h012 | How accurate is amino acid PET imaging for distinguishing glioma recurrence from radiation necrosis? | 35453892, 42425777
+h013 | Which antiepileptic drugs are recommended for glioma-related seizures? | 34589231, 33735464, 41740829
+h015 | What is the role of ferroptosis in glioma treatment? | 36185243, 36249003, 38821335
+h017 | What is the benefit of re-irradiation for recurrent glioblastoma? | 37105068, 33288605
+h018 | Do elderly glioblastoma patients benefit from hypofractionated radiotherapy? | 36336897, 34735442, 35315512
+h019 | Which radiomic features predict MGMT promoter methylation status on MRI? | 30002055, 38308012
+h020 | How does dendritic cell vaccination affect survival in glioblastoma patients? | 35200574, 33915151, 34767325

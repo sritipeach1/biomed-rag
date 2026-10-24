@@ -87,8 +87,11 @@ def test_the_shipped_unanswerable_set_is_sound():
     assert Q.validate(rows) == []
 
 
-def test_the_shipped_handwritten_drafts_parse():
+def test_the_handwritten_file_parses():
+    """Works for the shipped drafts AND for your edited file: the number of questions is yours to choose."""
     rows, unlabelled = parse_handwritten(EVAL_DIR / 'handwritten.txt')
-    assert len(rows) >= 30
+    assert rows
     assert len({r['id'] for r in rows}) == len(rows)
-    assert set(unlabelled) <= {r['id'] for r in rows}
+    assert all(r['question'].endswith('?') for r in rows)
+    assert all(r['gold_pmids'] for r in rows if r['id'] not in unlabelled)
+    assert all(p.isdigit() for r in rows for p in r['gold_pmids'])

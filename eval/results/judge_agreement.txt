@@ -1,0 +1,16 @@
+items you labelled: 30 of 30
+
+agreement on all three verdicts : 93%
+agreement on supported vs not   : 93%
+Cohen's kappa (3 verdicts)      : 0.00   (0 = no better than chance, 1 = perfect; above 0.6 is usually called good)
+
+rows = your label, columns = judge:
+
+| you \ judge | supported | partial | unsupported |
+|---|---|---|---|
+| supported | 28 | 2 | 0 |
+| partial | 0 | 0 | 0 |
+| unsupported | 0 | 0 | 0 |
+
+judge said supported, you said not   : 0  (judge too lenient)  items []
+judge said not supported, you said yes : 2  (judge too strict)   items [10, 29]

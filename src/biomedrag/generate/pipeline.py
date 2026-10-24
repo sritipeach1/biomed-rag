@@ -33,6 +33,7 @@ class Source:
     year: str
     score: float | None
     cited: bool = False         # True if the final answer cites this paper
+    text: str = ''              # the passage the model was shown (kept so answers can be audited later)
 
 
 @dataclass
@@ -74,10 +75,11 @@ def _feedback(report: CitationReport, allowed: list[str]) -> str:
 class RAGPipeline:
     def __init__(self, retriever: Retriever, llm, refuse_below: float = config.REFUSE_BELOW,
                  mode: str = 'hybrid_rerank', k_final: int = config.K_FINAL,
-                 max_retries: int = config.MAX_RETRIES):
+                 max_retries: int = config.MAX_RETRIES, prompt_version: str = 'v1'):
         self.retriever, self.llm = retriever, llm
         self.refuse_below, self.mode = refuse_below, mode
         self.k_final, self.max_retries = k_final, max_retries
+        self.prompt_version = prompt_version
 
     @classmethod
     def load(cls, backend: str | None = None, strategy: str = 'abstract', **kwargs) -> 'RAGPipeline':
@@ -88,7 +90,7 @@ class RAGPipeline:
         results = self.retriever.retrieve(question, mode=self.mode, k_final=self.k_final)
         retrieve_seconds = time.perf_counter() - t
 
-        sources = [Source(c['pmid'], c['title'], c['year'], s) for c, s in results]
+        sources = [Source(c['pmid'], c['title'], c['year'], s, text=c['text']) for c, s in results]
         top = results[0][1] if results else None
 
         attempts: list[str] = []
@@ -104,7 +106,7 @@ class RAGPipeline:
 
         chunks = [c for c, _ in results]
         allowed = [c['pmid'] for c in chunks]
-        messages = build_messages(question, chunks)
+        messages = build_messages(question, chunks, self.prompt_version)
 
         t = time.perf_counter()
         raw = self.llm.complete(messages)

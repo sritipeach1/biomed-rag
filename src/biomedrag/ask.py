@@ -50,6 +50,7 @@ def main():
     ap.add_argument('--strategy', default='abstract', help='which index folder to use')
     ap.add_argument('--refuse-below', type=float, default=config.REFUSE_BELOW,
                     help=f'refuse when the best paper scores below this (default {config.REFUSE_BELOW})')
+    ap.add_argument('--prompt', choices=['v1', 'v2', 'v3'], default='v1', help='which instructions the model gets')
     ap.add_argument('--show-raw', action='store_true',
                     help='also print exactly what the model replied (to debug refusals)')
     ap.add_argument('--save', help='also write every result to this .jsonl file')
@@ -64,7 +65,8 @@ def main():
 
     print('loading the indexes and models ...')
     try:
-        pipeline = RAGPipeline.load(args.backend, args.strategy, refuse_below=args.refuse_below)
+        pipeline = RAGPipeline.load(args.backend, args.strategy, refuse_below=args.refuse_below,
+                                    prompt_version=args.prompt)
         print(f'model: {pipeline.llm.name} / {pipeline.llm.model}   refuse below: {args.refuse_below}')
         with (open(args.save, 'w', encoding='utf-8') if args.save else contextlib.nullcontext()) as out:
             for question in questions:

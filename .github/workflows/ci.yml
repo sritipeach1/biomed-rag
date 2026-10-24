@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # The tests use small fakes, but the install should not pull the huge GPU build of PyTorch.
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests
+      - run: pytest -q
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install huggingface_hub
+      # Does nothing (and says so) until HF_TOKEN and HF_SPACE are set. See docs/deployment.md.
+      - run: python deploy/push_to_space.py
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SPACE_REPO: ${{ vars.HF_SPACE }}

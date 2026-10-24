@@ -64,6 +64,13 @@ REFUSE_BELOW = _env_float('REFUSE_BELOW', 5.0)
 PROMPT_VERSION = _env('PROMPT_VERSION', 'v3')
 MAX_RETRIES = 1         # extra attempts when the model's citations are missing or invalid
 
+# Serving (Step 6)
+STATIC = ROOT / 'static'                                    # the demo page and the saved example answers
+INDEX_REPO = _env('INDEX_REPO')                             # Hugging Face dataset that holds the index files
+ALLOWED_ORIGIN = _env('ALLOWED_ORIGIN', 'http://localhost:3000')     # websites allowed to call the API (comma-separated)
+RATE_PER_MINUTE = int(_env_float('RATE_PER_MINUTE', 6))     # questions one visitor may ask per minute
+DAILY_ANSWER_LIMIT = int(_env_float('DAILY_ANSWER_LIMIT', 40))   # model calls per day, shared by everyone
+
 
 def chunks_path(strategy: str) -> Path:
     return DATA / f'chunks_{strategy}.jsonl'

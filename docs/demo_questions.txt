@@ -1,0 +1,10 @@
+# Example questions for the demo page (one per line). Run:
+#   python -m biomedrag.api.demo_cache --backend groq
+# then read every saved answer in static/demo_cache.json before publishing.
+Does tumour treating fields therapy improve overall survival in newly diagnosed glioblastoma?
+How effective is 5-ALA fluorescence-guided surgery at achieving complete resection of glioblastoma?
+Do immune checkpoint inhibitors improve survival in recurrent glioblastoma?
+Can circulating tumour DNA in blood or cerebrospinal fluid be used to monitor glioma?
+What is the role of ferroptosis in glioma treatment?
+Do elderly glioblastoma patients benefit from hypofractionated radiotherapy?
+What is the best drug for type 2 diabetes in older adults?

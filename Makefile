@@ -1,4 +1,4 @@
-.PHONY: fetch stats chunk index search test lint
+.PHONY: fetch stats chunk index search test lint api demo-cache docker-build docker-run
 
 fetch:
 	python -m biomedrag.ingest.pubmed
@@ -20,3 +20,15 @@ test:
 
 lint:
 	ruff check src tests
+
+api:
+	uvicorn biomedrag.api.app:app --port 8000
+
+demo-cache:
+	python -m biomedrag.api.demo_cache --backend groq
+
+docker-build:
+	docker build -t biomed-rag .
+
+docker-run:
+	docker run --rm -p 7860:7860 --env-file .env -v "$(CURDIR)/index:/app/index" biomed-rag

@@ -219,7 +219,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 .env
-data/
+/data/
 models/
-index/
+/index/
 .venv/

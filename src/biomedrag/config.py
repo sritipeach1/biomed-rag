@@ -57,9 +57,11 @@ OLLAMA_MODEL = _env('OLLAMA_MODEL', 'qwen2.5:3b')
 GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions'
 GROQ_MODEL = _env('GROQ_MODEL', 'openai/gpt-oss-120b')     # the models a key may use differ per account
 # If the best reranker score is below this, the question is treated as outside the literature and
-# no answer is written. 2.0 is a starting point read off 15 hand-checked questions; Step 5 calibrates
-# it properly. The score scale belongs to this reranker model: change the model, redo the threshold.
-REFUSE_BELOW = _env_float('REFUSE_BELOW', 2.0)
+# no answer is written. 5.0 was chosen on the dev questions in Step 5 (the plateau was about 4.4 to 5.4).
+# The score scale belongs to this reranker model: change the model, redo the threshold.
+REFUSE_BELOW = _env_float('REFUSE_BELOW', 5.0)
+# Which instructions the model gets (see generate/prompt.py). v3 was chosen on the dev questions in Step 5.
+PROMPT_VERSION = _env('PROMPT_VERSION', 'v3')
 MAX_RETRIES = 1         # extra attempts when the model's citations are missing or invalid
 
 

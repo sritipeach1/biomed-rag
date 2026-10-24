@@ -75,7 +75,7 @@ def _feedback(report: CitationReport, allowed: list[str]) -> str:
 class RAGPipeline:
     def __init__(self, retriever: Retriever, llm, refuse_below: float = config.REFUSE_BELOW,
                  mode: str = 'hybrid_rerank', k_final: int = config.K_FINAL,
-                 max_retries: int = config.MAX_RETRIES, prompt_version: str = 'v1'):
+                 max_retries: int = config.MAX_RETRIES, prompt_version: str = config.PROMPT_VERSION):
         self.retriever, self.llm = retriever, llm
         self.refuse_below, self.mode = refuse_below, mode
         self.k_final, self.max_retries = k_final, max_retries

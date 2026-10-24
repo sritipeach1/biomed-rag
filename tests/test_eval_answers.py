@@ -114,9 +114,18 @@ def test_the_prompt_version_reaches_the_model():
     p, llm = pipe([GOOD], prompt_version='v2')
     p.answer('q')
     assert 'Step 1' in llm.calls[0][0]['content']
-    p1, llm1 = pipe([GOOD])
+    p1, llm1 = pipe([GOOD], prompt_version='v1')
     p1.answer('q')
     assert 'Step 1' not in llm1.calls[0][0]['content']
+
+
+def test_the_pipeline_default_prompt_follows_the_config_and_the_example_env_has_the_step_5_choices():
+    from pathlib import Path
+
+    from biomedrag import config
+    assert RAGPipeline(StubRetriever(make_results()), object()).prompt_version == config.PROMPT_VERSION
+    example = (Path(__file__).resolve().parent.parent / '.env.example').read_text()
+    assert 'REFUSE_BELOW=5.0' in example and 'PROMPT_VERSION=v3' in example
 
 
 def test_the_test_split_needs_final(monkeypatch):

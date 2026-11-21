@@ -1,0 +1,2 @@
+run,judge,answers,checked_sentences,supported,partial,unsupported,uncited_sentences,all_sentences,answers_fully_supported
+groq-openai-gpt-oss-120b-v3,openai/gpt-oss-20b,72,112,0.9821,0.0179,0.0000,3,115,0.9722

@@ -1,0 +1,10 @@
+run,threshold,metric,value,ci_low,ci_high,n
+groq-openai-gpt-oss-120b-v3,5.0,decision correct (all questions),0.9263,0.8737,0.9789,95
+groq-openai-gpt-oss-120b-v3,5.0,answerable: answered,0.9028,0.8333,0.9722,72
+groq-openai-gpt-oss-120b-v3,5.0,unanswerable: refused,1.0000,1.0000,1.0000,23
+groq-openai-gpt-oss-120b-v3,5.0,answers: sentences cited (mean),0.9872,0.9705,1.0000,65
+groq-openai-gpt-oss-120b-v3,5.0,answers: every sentence cited,0.9538,0.8923,1.0000,65
+groq-openai-gpt-oss-120b-v3,5.0,answers: gold paper cited,0.9538,0.9073,1.0000,65
+groq-openai-gpt-oss-120b-v3,5.0,search: gold paper in the 5 given to the model,0.9722,0.9306,1.0000,72
+groq-openai-gpt-oss-120b-v3,5.0,questions needing a retry,0.0000,0.0000,0.0000,95
+groq-openai-gpt-oss-120b-v3,5.0,leaked unanswerable,0,,,23

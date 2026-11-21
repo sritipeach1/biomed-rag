@@ -1,5 +1,6 @@
 # biomed-rag: a cited biomedical literature assistant
 
+live demo- https://huggingface.co/spaces/sritipeach/biomed-rag
 Ask a question about glioma (brain tumour) research. The system searches 30,000 PubMed abstracts and writes a
 short answer in which **every sentence cites the paper it came from**. When the abstracts do not contain the
 answer, it **declines instead of guessing**. A citation checker rejects answers that cite papers it never

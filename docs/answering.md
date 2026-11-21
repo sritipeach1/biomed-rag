@@ -1,4 +1,4 @@
-# How answers are produced (Step 4)
+# How answers are produced
 
 ```
 question
@@ -28,17 +28,18 @@ The last two on-topic rows are almost the same score, so no threshold separates 
 catches clearly off-topic questions cheaply (no model call). Questions that sound on-topic but are not
 actually answered by the papers are caught by the model's `INSUFFICIENT_EVIDENCE` reply.
 
-`REFUSE_BELOW` defaults to 2.0 as a starting point. The reranker's scores are not probabilities and
-depend on the model and library version, so the threshold is calibrated again in Step 5 on a dev
-set that includes about 40 unanswerable questions.
+`REFUSE_BELOW` defaults to 5.0. It was chosen on the dev questions (a plateau between about 4.4 and 5.4),
+before the test split was run. The reranker's scores are not probabilities and depend on the model and
+library version, so the threshold must be chosen again if either changes. See
+[results.md](results.md#3-refusal-when-should-the-system-decline).
 
 ## What the citation check does and does not prove
 
 It proves that every cited paper was really retrieved for this question (no invented PMIDs, no
 pointing at papers the model never saw). It does **not** prove that the paper supports the sentence.
-That is "faithfulness" and is measured separately in Step 5 with a calibrated LLM judge.
+That is "faithfulness" and is measured separately with an LLM judge (see [results.md](results.md#5-is-the-citation-checker-enough-faithfulness)).
 It also reports citation coverage (the share of sentences with a citation) without enforcing it,
-because models often leave a closing summary sentence uncited.
+because models often leave a closing summary sentence uncited. The v3 prompt asks for a citation on every sentence.
 
 ## Backends
 

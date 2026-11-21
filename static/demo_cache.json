@@ -1,0 +1,302 @@
+[
+ {
+  "question": "Does tumour treating fields therapy improve overall survival in newly diagnosed glioblastoma?",
+  "response": {
+   "question": "Does tumour treating fields therapy improve overall survival in newly diagnosed glioblastoma?",
+   "status": "answered",
+   "answered": true,
+   "text": "Tumor treating fields therapy combined with standard temozolomide-based treatment is associated with longer overall survival in newly diagnosed glioblastoma patients, as demonstrated in multiple real‑world cohorts and consistent with pivotal trial data[PMID:42460646][PMID:40163248][PMID:42071826].",
+   "sources": [
+    {
+     "pmid": "42460646",
+     "title": "Implementation of tumour treating fields for glioblastoma in Belgium: real-world outcomes from a Belgian tertiary centre.",
+     "year": "2026",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42460646/"
+    },
+    {
+     "pmid": "39893330",
+     "title": "Association of tumor treating fields (TTFields) therapy with overall survival in newly diagnosed glioblastoma.",
+     "year": "2025",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39893330/"
+    },
+    {
+     "pmid": "41041265",
+     "title": "Tumor Treating Fields: An Innovative Therapy for Glioblastoma and Other Solid Tumors.",
+     "year": "2025",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41041265/"
+    },
+    {
+     "pmid": "40163248",
+     "title": "Long-term survival, patterns of progression, and patterns of use for patients with newly diagnosed glioblastoma treated with or without Tumor Treating Fields (TTFields) in a real-world setting.",
+     "year": "2025",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40163248/"
+    },
+    {
+     "pmid": "42071826",
+     "title": "Efficacy and safety of tumor-treating fields combined with concurrent chemoradiotherapy for newly diagnosed glioblastoma patients.",
+     "year": "2026",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42071826/"
+    }
+   ],
+   "seconds": 40.3,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "How effective is 5-ALA fluorescence-guided surgery at achieving complete resection of glioblastoma?",
+  "response": {
+   "question": "How effective is 5-ALA fluorescence-guided surgery at achieving complete resection of glioblastoma?",
+   "status": "answered",
+   "answered": true,
+   "text": "5‑ALA–induced fluorescence is reported to increase the proportion of glioblastoma cases in which gross‑total resection is achieved, and its safety and efficacy have been described as well‑established in clinical practice[PMID:40430928]. In a Hong Kong series of 16 patients (including 12 high‑grade gliomas), postoperative MRI indicated total resection in 9 patients, near‑total resection in 2, and subtotal resection in 5, suggesting that 5‑ALA guidance can facilitate complete or near‑complete removal in a substantial subset of malignant gliomas[PMID:28844780].",
+   "sources": [
+    {
+     "pmid": "31355622",
+     "title": "5-ALA fluorescence on tumors different from malignant gliomas. Review of the literature and our experience.",
+     "year": "2019",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31355622/"
+    },
+    {
+     "pmid": "31989247",
+     "title": "5-ALA fluorescence in a WHO grade I papillary glioneuronal tumour: a case report.",
+     "year": "2020",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31989247/"
+    },
+    {
+     "pmid": "28844780",
+     "title": "5-Aminolevulinic acid fluorescence guided resection of malignant glioma: Hong Kong experience.",
+     "year": "2018",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28844780/"
+    },
+    {
+     "pmid": "40430928",
+     "title": "Agents for Fluorescence-Guided Glioblastoma Surgery.",
+     "year": "2025",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40430928/"
+    },
+    {
+     "pmid": "40978294",
+     "title": "Surgical efficacy and survival outcomes of fluorescein sodium-guided surgery in glioblastoma: a single-center experience.",
+     "year": "2025",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40978294/"
+    }
+   ],
+   "seconds": 2.7,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "Do immune checkpoint inhibitors improve survival in recurrent glioblastoma?",
+  "response": {
+   "question": "Do immune checkpoint inhibitors improve survival in recurrent glioblastoma?",
+   "status": "answered",
+   "answered": true,
+   "text": "Immune checkpoint inhibitors have not demonstrated a survival benefit for recurrent glioblastoma, with retrospective and prospective studies reporting no extension of overall survival and randomized phase 3 trials showing no improvement over bevacizumab[PMID:36707424][PMID:35976319].",
+   "sources": [
+    {
+     "pmid": "36707424",
+     "title": "Using EGFR amplification to stratify recurrent glioblastoma treated with immune checkpoint inhibitors.",
+     "year": "2023",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36707424/"
+    },
+    {
+     "pmid": "35976319",
+     "title": "Immune-checkpoint inhibitors for glioblastoma: what have we learned?",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35976319/"
+    },
+    {
+     "pmid": "38721406",
+     "title": "Immune Checkpoint Inhibitors and Glioblastoma: A Review on Current State and Future Directions.",
+     "year": "2024",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38721406/"
+    },
+    {
+     "pmid": "31832212",
+     "title": "Checkpoint inhibitor failure in hypermutated and mismatch repair-mutated recurrent high-grade gliomas.",
+     "year": "2019",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31832212/"
+    },
+    {
+     "pmid": "37686584",
+     "title": "The Development of Immunotherapy for the Treatment of Recurrent Glioblastoma.",
+     "year": "2023",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37686584/"
+    }
+   ],
+   "seconds": 2.1,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "Can circulating tumour DNA in blood or cerebrospinal fluid be used to monitor glioma?",
+  "response": {
+   "question": "Can circulating tumour DNA in blood or cerebrospinal fluid be used to monitor glioma?",
+   "status": "answered",
+   "answered": true,
+   "text": "Circulating tumor DNA (ct DNA) is minimally detectable in blood for glioma, limiting its utility for monitoring, whereas cerebrospinal fluid (CSF) provides a more reliable source for liquid biopsy of glioma genomes[PMID:30401728].  \nCSF ct DNA mutations show high concordance with tumor DNA and can reflect molecular subtypes, such as IDH, PTEN, TP53, RB1 and EGFR alterations, supporting its use as an alternative diagnostic and monitoring tool[PMID:32039443].  \nIn a cohort of 85 glioma patients, tumor‑derived DNA was detected in CSF in 49.4% of cases, and its presence correlated with disease burden and adverse outcome, indicating that CSF ct DNA can track tumor evolution and potentially guide genotype‑directed therapies[PMID:30675060].  \nA cancer‑genomic panel applied to CSF ct DNA achieved a 92.3% detection rate and demonstrated strong concordance with tumor DNA mutation profiles and tumor mutation burden, especially in glioblastoma, further supporting its effectiveness for monitoring glioma genomics[PMID:35810802].  \nIn pediatric diffuse midline glioma, detection of characteristic histone‑variant mutations in CSF‑tDNA or ct DNA enables non‑invasive molecular profiling and may allow earlier prediction of treatment response, highlighting the monitoring potential of CSF‑based liquid biopsies[PMID:31896079].",
+   "sources": [
+    {
+     "pmid": "30401728",
+     "title": "Biopsy-free screening for glioma.",
+     "year": "2018",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30401728/"
+    },
+    {
+     "pmid": "32039443",
+     "title": "Applications of cerebrospinal fluid circulating tumor DNA in the diagnosis of gliomas.",
+     "year": "2020",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32039443/"
+    },
+    {
+     "pmid": "30675060",
+     "title": "Tracking tumour evolution in glioma through liquid biopsies of cerebrospinal fluid.",
+     "year": "2019",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30675060/"
+    },
+    {
+     "pmid": "35810802",
+     "title": "Detection of mutation profiles and tumor mutation burden of cerebrospinal fluid circulating DNA by a cancer genomic panel sequencing in glioma patients.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35810802/"
+    },
+    {
+     "pmid": "31896079",
+     "title": "Liquid biopsy for pediatric diffuse midline glioma: a review of circulating tumor DNA and cerebrospinal fluid tumor DNA.",
+     "year": "2020",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31896079/"
+    }
+   ],
+   "seconds": 5.9,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "What is the role of ferroptosis in glioma treatment?",
+  "response": {
+   "question": "What is the role of ferroptosis in glioma treatment?",
+   "status": "answered",
+   "answered": true,
+   "text": "Ferroptosis is an iron‑dependent, non‑apoptotic form of regulated cell death that influences glioma progression by affecting tumor cell proliferation, angiogenesis, necrosis, and the immune‑resistant microenvironment, making its induction an attractive therapeutic strategy [PMID:36091118]. Inducing ferroptosis can overcome chemotherapy resistance and improve treatment efficacy, as ferroptosis‑related regulators correlate with patient survival and ferroptosis‑inducing agents have shown positive effects against glioma cells [PMID:36185243][PMID:33893939]. Recent reviews highlight key molecular mechanisms—iron overload, lipid peroxidation, inhibition of the cystine/glutathione antiporter system Xc⁻ and GPX4—and discuss therapeutic opportunities and challenges of manipulating ferroptosis to enhance glioma treatment outcomes [PMID:36358495][PMID:38821335].",
+   "sources": [
+    {
+     "pmid": "36091118",
+     "title": "The molecular mechanisms of ferroptosis and its role in glioma progression and treatment.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36091118/"
+    },
+    {
+     "pmid": "36358495",
+     "title": "Ferroptosis and Its Potential Role in Glioma: From Molecular Mechanisms to Therapeutic Opportunities.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36358495/"
+    },
+    {
+     "pmid": "38821335",
+     "title": "Ferroptosis in glioma therapy: advancements in sensitizing strategies and the complex tumor-promoting roles.",
+     "year": "2024",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38821335/"
+    },
+    {
+     "pmid": "36185243",
+     "title": "Ferroptosis: A novel therapeutic strategy and mechanism of action in glioma.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36185243/"
+    },
+    {
+     "pmid": "33893939",
+     "title": "Adaptive Changes Allow Targeting of Ferroptosis for Glioma Treatment.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33893939/"
+    }
+   ],
+   "seconds": 10.2,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "Do elderly glioblastoma patients benefit from hypofractionated radiotherapy?",
+  "response": {
+   "question": "Do elderly glioblastoma patients benefit from hypofractionated radiotherapy?",
+   "status": "answered",
+   "answered": true,
+   "text": "Hypofractionated radiotherapy (HFRT) provides survival outcomes comparable to conventional fractionated radiotherapy (CFRT) in elderly glioblastoma patients, with pooled analyses showing no statistically significant difference in overall survival (HR 0.80; 95 % CI 0.62‑1.04)[PMID:41085781]. Retrospective national database data indicate that HFRT is associated with a reduced risk of death compared with no adjuvant therapy (HR 0.65; p < 0.01) and yields survival comparable to CFRT (HR 0.60; p < 0.01)[PMID:29209874]. Clinical trials of HFRT alone (40 Gy in 15 fractions) have demonstrated effectiveness in elderly or frail patients, with retrospective studies suggesting similar survival to conventional regimens[PMID:36336897]. In patients over 75 years receiving HFRT combined with temozolomide (and subsequent bevacizumab), median overall survival reached 20 months, supporting the safety and efficacy of HFRT in this age group[PMID:29796740]. However, subgroup analyses show that when concurrent temozolomide is used, CFRT may confer a survival advantage (HR 0.68; 95 % CI 0.49‑0.93)[PMID:41085781].",
+   "sources": [
+    {
+     "pmid": "36336897",
+     "title": "Radiotherapy for elderly patients with glioblastoma: an assessment of hypofractionation and modern treatment techniques.",
+     "year": "2022",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36336897/"
+    },
+    {
+     "pmid": "35118843",
+     "title": "Radiotherapy for Newly Diagnosed Glioblastoma in the Elderly: What Is the Standard?",
+     "year": "2022",
+     "cited": false,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35118843/"
+    },
+    {
+     "pmid": "41085781",
+     "title": "Hypofractionated vs. conventional fractionated radiotherapy in the temozolomide era for elderly patients with glioblastoma: a systematic review and meta-analysis by the Korean society for neuro-oncology.",
+     "year": "2025",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41085781/"
+    },
+    {
+     "pmid": "29796740",
+     "title": "Treatment outcomes of hypofractionated radiotherapy combined with temozolomide followed by bevacizumab salvage therapy in glioblastoma patients aged > 75 years.",
+     "year": "2018",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29796740/"
+    },
+    {
+     "pmid": "29209874",
+     "title": "Utilization of hypofractionated radiotherapy in treatment of glioblastoma multiforme in elderly patients not receiving adjuvant chemoradiotherapy: A National Cancer Database Analysis.",
+     "year": "2018",
+     "cited": true,
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29209874/"
+    }
+   ],
+   "seconds": 16.7,
+   "from_cache": false
+  }
+ },
+ {
+  "question": "What is the best drug for type 2 diabetes in older adults?",
+  "response": {
+   "question": "What is the best drug for type 2 diabetes in older adults?",
+   "status": "refused_low_score",
+   "answered": false,
+   "text": "I could not find evidence for this question in the indexed PubMed abstracts, so I will not answer it.",
+   "sources": [],
+   "seconds": 1.5,
+   "from_cache": false
+  }
+ }
+]

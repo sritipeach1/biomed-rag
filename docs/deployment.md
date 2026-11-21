@@ -44,12 +44,27 @@ downloaded on first start.
 
 ## Hugging Face Space
 
-1. Upload the index folder to a **private dataset** repository (`hf upload <you>/<name> ./index/abstract . --repo-type dataset --private`).
-2. In GitHub: Settings → Secrets and variables → Actions. Add a secret `HF_TOKEN` (a token with write access)
+Hugging Face charges for Docker Spaces (a PRO subscription), but **static Spaces are free**. The workflow
+therefore publishes a static Space by default: the same page, showing the saved example answers from
+`static/demo_cache.json`. Free-text questions need the full system, so the page points to this repository for
+running it yourself.
+
+1. In GitHub: Settings, Secrets and variables, Actions. Add a secret `HF_TOKEN` (a token with write access)
    and a variable `HF_SPACE` (like `your-hf-name/biomed-rag`).
-3. Push to `main`. The workflow runs the tests, then uploads the app to the Space (creating it if needed).
-4. In the Space settings add secrets and variables: `LLM_BACKEND=groq`, `GROQ_API_KEY`, `GROQ_MODEL`,
+2. Push to `main`. The workflow runs the tests, then creates the Space if needed and uploads the page and the
+   saved answers (`deploy/push_to_space.py`).
+3. Refresh the saved answers whenever the prompt or threshold changes (see above), commit
+   `static/demo_cache.json`, and push.
+
+### Live answers (optional, paid)
+
+To serve the whole app so that visitors can ask any question, add a variable `HF_SPACE_KIND` = `docker` and
+push. This needs a Hugging Face PRO subscription. Then:
+
+1. Upload the index folder to a **private dataset** repository
+   (`hf upload <you>/<name> ./index/abstract . --repo-type dataset --private`).
+2. In the Space settings add secrets and variables: `LLM_BACKEND=groq`, `GROQ_API_KEY`, `GROQ_MODEL`,
    `INDEX_REPO`, `HF_TOKEN` (read access to the dataset), `REFUSE_BELOW=5.0`, `PROMPT_VERSION=v3`,
    `ALLOWED_ORIGIN` (the portfolio website).
 
-Free Spaces sleep when idle; the first request afterwards takes a minute or two.
+Docker Spaces on the free tier sleep when idle; the first request afterwards takes a minute or two.

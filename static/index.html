@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BiomedRAG: cited answers from glioma research</title>
+<!-- "live": the page talks to the API. deploy/push_to_space.py sets this to "static" for the free Hugging Face
+     static Space, where the page can only show the saved example answers. -->
+<meta name="biomedrag-mode" content="live">
 <meta name="description" content="Ask a question about glioma research. Answers come only from PubMed abstracts and cite the papers they use.">
 <style>
   :root {
@@ -69,14 +72,14 @@
 <main>
   <h1>Ask about glioma research</h1>
   <p class="lede">Answers come only from PubMed abstracts about glioma and cite the papers they use. When the abstracts do not contain the answer, it says so instead of guessing.</p>
-  <div class="notice" role="note">Research tool only; not medical advice.</div>
+  <div class="notice" role="note" id="notice">Research tool only; not medical advice.</div>
 
   <form id="form">
     <label for="q">Your question</label>
     <textarea id="q" maxlength="500" placeholder="For example: Does tumour treating fields therapy improve survival in glioblastoma?" required></textarea>
     <div class="row">
       <button class="primary" id="go" type="submit">Ask</button>
-      <span class="hint">Live answers take about 20 seconds. Ctrl+Enter also sends.</span>
+      <span class="hint" id="hint">Live answers take about 20 seconds. Ctrl+Enter also sends.</span>
     </div>
   </form>
 
@@ -89,7 +92,7 @@
 
   <footer>
     <p>How it works: keyword and meaning-based search, a re-ranking model, then a language model that must cite the papers it was given. A checker rejects citations to papers that were not retrieved.</p>
-    <p>It can still be wrong: a cited paper may not fully support a sentence. Open the linked PubMed records to check. The first request after a quiet period may take a minute while the service wakes up.</p>
+    <p>It can still be wrong: a cited paper may not fully support a sentence. Open the linked PubMed records to check. <span id="wake">The first request after a quiet period may take a minute while the service wakes up.</span></p>
   </footer>
 </main>
 
@@ -97,6 +100,11 @@
 (function () {
   const $ = (id) => document.getElementById(id);
   const form = $('form'), box = $('q'), go = $('go'), out = $('result');
+  const modeTag = document.querySelector('meta[name="biomedrag-mode"]');
+  const STATIC = !!modeTag && modeTag.content === 'static';
+  const REPO = 'https://github.com/sritipeach1/biomed-rag';
+  const saved = new Map();                       // static mode: normalised question -> saved response
+  const norm = (q) => q.toLowerCase().split(/\s+/).filter(Boolean).join(' ');
 
   function el(tag, props, children) {
     const node = document.createElement(tag);
@@ -158,7 +166,20 @@
     show(card);
   }
 
+  // Static mode: only the saved example answers exist. Say so plainly for any other question.
+  function askSaved(question) {
+    const hit = saved.get(norm(question));
+    if (hit) { showAnswer(Object.assign({}, hit, { from_cache: true })); return; }
+    const msg = el('div', { class: 'notice', role: 'status' });
+    msg.append('This hosted page only holds saved answers to the example questions below, so it cannot answer new ones. '
+      + 'Pick an example, or run the full system on your own computer: ');
+    msg.append(el('a', { href: REPO, target: '_blank', rel: 'noopener noreferrer', text: 'instructions on GitHub' }));
+    msg.append('.');
+    show(msg);
+  }
+
   async function ask(question) {
+    if (STATIC) { askSaved(question); return; }
     go.disabled = true;
     show(el('p', { class: 'hint' }, [el('span', { class: 'spinner' }),
       'Searching the abstracts and writing a cited answer. This can take up to 30 seconds.']));
@@ -181,9 +202,20 @@
     if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); form.requestSubmit(); }
   });
 
-  fetch('/examples').then((r) => r.json()).then((items) => {
+  if (STATIC) {
+    $('notice').textContent = 'Research tool only; not medical advice. This hosted page shows saved answers to the '
+      + 'example questions. The full system answers any question when you run it yourself.';
+    $('hint').textContent = 'Choose an example below to see a cited answer or a refusal.';
+    $('wake').textContent = 'The answers on this page were produced by the real pipeline and saved.';
+    box.placeholder = 'Choose an example below, or type one of them';
+  }
+
+  const loadExamples = STATIC ? fetch('demo_cache.json').then((r) => r.json())
+                              : fetch('/examples').then((r) => r.json());
+  loadExamples.then((items) => {
     if (!items.length) return;
     items.forEach((item) => {
+      if (STATIC) saved.set(norm(item.question), item.response);
       const chip = el('button', { class: 'chip', type: 'button', text: item.question });
       chip.addEventListener('click', () => { box.value = item.question; ask(item.question); });
       $('chips').append(chip);

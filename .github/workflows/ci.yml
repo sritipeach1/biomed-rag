@@ -34,3 +34,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           SPACE_REPO: ${{ vars.HF_SPACE }}
+          # 'static' (free) unless you create a variable HF_SPACE_KIND = docker
+          SPACE_KIND: ${{ vars.HF_SPACE_KIND }}
